@@ -22,7 +22,7 @@ jobs:
           script: |
             cd /home/ubuntu/compose-nginx-ssl-stack
             git pull origin main
-            docker compose down
+            docker-compose down
             docker system prune -af
-            docker compose up -d --build
+            docker-compose up -d --build
             echo "✅ Deploy complete!"
